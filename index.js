@@ -50,7 +50,7 @@ const questions = () => {
         name: "license",
         message: "Choose licens type",
         choices: [
-          "Open Source Software License",
+          "MIT",
           "Public Domain License",
           "Permissive License",
           "Restrictive Licenses",
