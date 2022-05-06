@@ -1,14 +1,13 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  const licenseBadge = data.license;
-  let licenseClassify = "";
-  if (licenseBadge === "MIT") {
-    licenseClassify =
-      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-  }
-}
-
+// function renderLicenseBadge(license) {
+//   let licenseClassify = "";
+//   if (licenseBadge === "MIT") {
+//     licenseClassify =
+//       "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+//   }
+//   return licenseClassify;
+// }
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {}
@@ -19,35 +18,74 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  const licenseBadge = data.license.toString();
+
+  let licenseClassify = "";
+  if (licenseBadge === "MIT") {
+    licenseClassify =
+      "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+  } else if (licenseBadge === "Mozilla Public License 2.0") {
+    licenseClassify =
+      "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+  } else if (licenseBadge === "Apache 2.0 License") {
+    licenseClassify =
+      "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+  } else if (licenseBadge === "GNU GPL v3") {
+    licenseClassify =
+      "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+  } else if (licenseBadge === "GNU LGPL v3") {
+    licenseClassify =
+      "[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)";
+  } else {
+    licenseClassify = licenseClassify;
+  }
+
   //renderLicenseBadge(data);
   return `# ${data.title}
 
- ## License
- ${data.license}
+Table of Contents 
 
-## Description
-${data.description}
+[license](#license)
 
-## Installation
-${data.installation}
+[Description](#description)
 
-## Usage
-${data.usage}
+[Installation](#installation)
 
-## Contributing
-${data.contruibution}
+[Usage](#usage)
 
-## Tests 
-${data.test}
+[Tests](#tests)
 
-## Questions 
-If you have further questions feel free to reach out using email or GitHub
+[Questions](#questions)
 
-<a href="https://github.com/${data.github}">GitHub</a>
 
-${data.email}
 
-`;
+## License
+${licenseClassify}
+
+ ## Description
+ ${data.description}
+
+ ## Installation
+ ${data.installation}
+
+ ## Usage
+ ${data.usage}
+
+ ## Contributing
+ ${data.contruibution}
+
+ ## Tests
+ ${data.test}
+
+ ## Questions
+ If you have further questions feel free to reach out using email or GitHub
+
+ <a href="https://github.com/${data.github}">GitHub</a>
+
+ ${data.email}
+
+
+ `;
 }
 
 module.exports = generateMarkdown;

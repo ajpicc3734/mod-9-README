@@ -51,11 +51,10 @@ const questions = () => {
         message: "Choose licens type",
         choices: [
           "MIT",
-          "Public Domain License",
-          "Permissive License",
-          "Restrictive Licenses",
-          "LGPL",
-          "Proprietary Software License",
+          "Mozilla Public License 2.0",
+          "Apache 2.0 License",
+          "GNU GPL v3",
+          "GNU LGPL v3",
         ],
       },
       //questions section
