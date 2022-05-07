@@ -1,6 +1,6 @@
-# 
+# Professional README Generator
 
-Table of Contents 
+Table of Contents
 
 [license](#license)
 
@@ -14,32 +14,34 @@ Table of Contents
 
 [Questions](#questions)
 
-
-
 ## License
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
- ## Description
- 
+## Description
 
- ## Installation
- 
+this app generates a professional README file
 
- ## Usage
- 
+## Installation
 
- ## Contributing
- 
+node.js and npm inquirer are needed for install
 
- ## Tests
- 
+## Usage
 
- ## Questions
- If you have further questions feel free to reach out using email or GitHub
+this is a demo
 
- <a href="https://github.com/">GitHub</a>
+## Contributing
 
- 
+not accepting contributions at this time
 
+## Tests
 
- 
+run node index in command line
+
+## Questions
+
+If you have further questions feel free to reach out using email or GitHub
+
+<a href="https://github.com/ajpicc3734">GitHub</a>
+
+ajpicc3734@gmail.com
